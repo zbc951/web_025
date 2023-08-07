@@ -1,0 +1,71 @@
+//背景
+body .bg {
+    background: url("../img/bg.png") no-repeat ;
+    background-size: 100%;
+}
+//手機下載
+body aside .download .txt i {
+    background: url("../img/downlaodIc.png") no-repeat center;
+    background-size: contain;
+} 
+body aside .download .txt:hover i {
+    background: url("../img/downlaodIcHover.png") no-repeat center;
+    background-size: contain;
+} 
+//service
+body aside .service li i {
+    background: url("../img/serviceIc.png") no-repeat;
+    background-size: 500%;
+} 
+body aside .service li:hover i {
+    background: url("../img/serviceIcHover.png") no-repeat;
+    background-size: 500%;
+} 
+body aside .service li.active i {
+    background: url("../img/serviceIcHover.png") no-repeat;
+    background-size: 500%;
+} 
+//回到頂部
+body aside .backTop .icon {
+    background: url("../img/backTopIc.png") no-repeat center;
+    background-size: contain;
+}
+body aside .backTop:hover .icon {
+    background: url("../img/backTopIcHover.png") no-repeat center;
+    background-size: contain;
+}
+//logo
+header .bottom .center .logo {
+    background: url("../img/logo.png") no-repeat center;
+    background-size: contain;
+}
+//navBg
+header .bottom .center .navGroup li{
+    background: url("../img/navBg.png") no-repeat center;
+    background-size: contain;
+}
+//marquee icon
+.home .marqueeGroup i {
+    background: url("../img/marqueeIc.png") no-repeat center;
+    background-size: contain;
+}
+//marquee Bg
+.home .marqueeGroup {
+    background: url("../img/marqueeBg.png") no-repeat center;
+    background-size: contain;
+}
+//footer 邊框
+footer .footerTxt {
+    background: url("../img/footerBg.png") no-repeat center;
+    background-size: cover;
+}
+//背景硬幣
+.bg .bgPic .bgCoinl {
+    background: url("../img/bgCoinl.png") no-repeat center;
+    background-size: contain;
+}
+.bg .bgPic .bgCoinr {
+    background: url("../img/bgCoinr.png") no-repeat center;
+    background-size: contain;
+}
+

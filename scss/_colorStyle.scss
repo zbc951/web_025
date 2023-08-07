@@ -1,0 +1,202 @@
+//top
+$headerBg_1: #e12425;
+$headerBg_2: linear-gradient(to top, #373737 0%, #151515 28%, #373737 93%);
+$headerBg_3: linear-gradient(to top, #7d0022 0%, #97012a 45%, #a1002c 100%);
+$headerBg_4: linear-gradient(to left, #181818 0%, #353535 100%);
+$headerBg_5: linear-gradient(to right, #f7d6a5 0%, #caa279 100%);
+$borderColor_5: #f3d3a4;
+$downListBg_1: linear-gradient(to top, #1d1d1d 0%, #2a2a2a 100%);;
+
+//nav
+$mainColor_1: #f3d3a4;
+$mainColor_2: #fffcf7;
+$forgetColor_1: #fff9d2;
+$navHover_1: #06466e;
+$navHover_2: #fffcf7;
+$navHover_3: #e12425;
+$navBorder_1: #946f42;
+$navHoverBg_1: linear-gradient(to bottom, #810000 0%, #7b0000 45%, #cd0808 100%);
+$navHoverBr_1: linear-gradient(to top, #ffffff 0%, #6c6c6c 31%,#d1d1d1 57%, #eeeeee 73%, #d1d1d1 85%,#d1d1d1 93% , #d1d1d1 100%);
+
+//login
+$inputBg_1: #8f0708;
+$inputBorder_1: #f24f50;
+$placeholder_1: #ffffff;
+
+//button
+$buttonbg_1: linear-gradient(to top, #0379c1 0%,#04314d 45%, #0379c1 100%);
+$buttonbg_2: linear-gradient(to top, #ffcb2e 0%, #d36206 49%, #fbd665 100%);
+$buttonbg_3: linear-gradient(to top, #0a48af 0%, #04214d 100%);
+$buttonbg_4: linear-gradient(to top, #eea008 0%, #ce6100 100%);
+$buttonbg_8: linear-gradient(to bottom, #b99763 0%, #684826 100%);;
+$buttonTxt_1: #ffffff;
+$buttonTxt_2: #063d19;
+$buttonBorder_1: #f1d5ae;
+$buttonBorder_2: #870405;
+
+//登入後
+$buttonbg_5: #ffffff;
+$buttonbg_6:linear-gradient(to top, #b50000 0%,#bd0000 45%, #fa0000 100%);
+$buttonbg_7:linear-gradient(to top, #333333 0%,#242424 100%);
+$borderColor_2:#7d0022;
+$borderColor_3:#ffffff;
+$borderColor_4:#f8deb8;
+
+//language
+$languageBg_1: #b10001;
+$optionBg_1: #ffffff;
+$optionBg_2: linear-gradient(to top, #181818 0%,#343434 100%);
+$optionTxt_1: #000000;
+$selectTxt_1: #ffffff;
+
+//swiper
+$swiperBullet_1: #f23233;
+$swiperBullet_2: #ffffff;
+
+//game
+$gameTitle_1: #034a65;
+$gameTitle_2: #034a65;
+$gameBg_1: #ffd08d;
+$gameBg_2: #c29f6d;
+$gameBorder_1: linear-gradient(to right, #d1a466 0%,#fff0b3 31%,#fff0b3 47%,#ffdd9e 65%,#fff0b3 83%,#d1a466 100%);
+
+//footer
+$footerBg_1: #e12425;
+$footerBg_2: linear-gradient(to right, #041b29 0%,#13434d 50%,#041b29 100%);
+$footerTitle_1: #ffd08d;
+$footerTxt_1: #acc6d3;
+$footerTxt_2: #f1c181;
+$foooterBgHover_1: #063552;
+$foooterBgHover_2: #f8eab1;
+$foooterTxtHover_1: #ffe3ab;
+$footerBr_1:#ae8937;
+
+//aside
+$downloadBg_1: #084e79;
+$downloadBg_2: linear-gradient(to bottom, #d1ae60 14%, #fff3c6 44%, #deaa58 90%);
+$downloadBg_3: #dddddd;
+$downloadBg_4: linear-gradient(to left, #a05c0a 0%, #f5d88f 100%);
+$downshadow_1: #000000;
+$downloadBorder_1: #dcab70;
+$serviceBg_1: linear-gradient(to top, #dddddd 0%, #ffffff 100%);
+$serviceTxt_1: #06466e;
+$backTopBg_1: #084e79;
+$backTopBg_2: linear-gradient(to top, #d1ae60 14%, #fff3c6 44%, #deaa58 90%);
+$backTopBorder_1: #dcab70;
+$backIc_1: #dcab70;
+
+//box-shadow
+$shadowColor_1: #000000;
+
+//marquee
+@mixin marquee {
+    // background: linear-gradient(to top, #f3d3a4 0%, #9e764f 51%, #f3d3a4 100%);
+    // border-radius: 30px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    // overflow: hidden;
+    z-index: 0;
+
+    &::before {
+        content: "";
+        width: 60px;
+        height: 40px;
+        background: #083d5d;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        z-index: 1;
+        clip-path: polygon(0% 15%, 10% 10%, 15% 0%, 85% 0%, 90% 10%, 100% 15%, 100% 85%, 90% 90%, 85% 100%, 15% 100%, 10% 90%, 0% 85%);
+    }
+
+    i {
+        width: 28px;
+        height: 22px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30px;
+        z-index: 2;
+    }
+    .decoratel {
+        width: 20px;
+        height: 40px;
+        background: #083d5d;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 87px;
+        z-index: 2;
+        clip-path: polygon(40% 0%, 100% 0, 100% 100%, 40% 100%, 0% 80%, 0% 20%);
+    }
+    .marquee {
+        width: 1240px;
+        height: 40px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        background: #083d5d;
+        z-index: 3;
+
+        p {
+            display: inline-block;
+            font-size: 17px;
+            font-weight: bold;
+            color: #ffeca8;
+            padding-left: 100%;
+            padding-top: 12px;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+    }
+    .decorater {
+        width: 20px;
+        height: 40px;
+        background: #083d5d;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        z-index: 2;
+        clip-path: polygon(0 0, 60% 0%, 100% 20%, 100% 80%, 60% 100%, 0 100%);
+        
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+@mixin gcLogo {
+    background: #faf5f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    &:hover,&:active,&.active {
+        background: #ffffff;
+    }
+
+}
+@mixin hrBtn {
+    font-size: 18px;
+    background: linear-gradient(to top, #d43a04 0%, #f58500 100%);
+    color: #ffffff;
+    border-radius: 10px;
+    
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom, #d43a04 0%, #f58500 100%);
+    }
+}

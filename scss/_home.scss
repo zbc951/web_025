@@ -1,0 +1,519 @@
+.home {
+    width: 100%;
+    height: auto;
+
+    //swiper
+    .swiper {
+        max-width: 1903px;
+        margin-bottom: -95px;
+        mask: url("../img/bannerBg.png");
+
+        .swiper-wrapper {
+
+            .swiper-slide {
+                width: 1920px;
+                height: 723px;
+                position: relative;
+
+                &.swiper-slide-active {
+
+                    .bannerBg {
+                        width: 1920px;
+                        height: 723px;
+                        object-fit: contain;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    // banner文字
+                    .bannerTxt {
+                        width: 912px;
+                        height: 216px;
+                        position: absolute;
+                        top: 225px;
+                        left: 262px;
+                        animation: bannerTxt 2s linear 0s;
+                    }
+                    @keyframes bannerTxt {
+                        0% {
+                            transform: translateX(200%) scale(1);
+                        }
+                        50% {
+                            transform: translateX(200%) scaleX(0.99)scaleY(1.02);
+                        }
+                        65% {
+                            transform: translateX(-5%) scaleX(1.02)scaleY(0.98);
+                        }
+                        75% {
+                            transform: translateX(5%) scaleX(1.02)scaleY(0.98);
+                        }
+                        100% {
+                            transform: translateX(0%) scale(1);
+                        }
+                    }
+                    // banner硬幣
+                    .bannerCoin {
+                        width: 1736px;
+                        height: 652px;
+                        position: absolute;
+                        top: 120px;
+                        right: 175px;
+                        z-index: 1;
+                        animation: bannerCoin 1s linear 0.5s infinite;
+                    }
+                    @keyframes bannerCoin {
+                        0% {
+                            transform: scale(1);
+                        }
+                        50% {
+                            transform: scaleX(0.99)scaleY(1.02);
+                        }
+                        75% {
+                            transform: scaleX(1.02)scaleY(0.98);
+                        }
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                    // bannerLight
+                    .bannerLight {
+                        width: 909px;
+                        height: 164px;
+                        position: absolute;
+                        top: 195px;
+                        left: 275px;
+                        animation: bannerLight 1s linear 2s infinite;
+                        opacity: 0;
+                    }
+                    @keyframes bannerLight {
+                        0% {
+                            transform: scale()1;
+                            opacity: 1;
+                        }
+                        50% {
+                            transform: scaleX(0.99)scaleY(1.02);
+                            opacity: 0;
+                        }
+                        75% {
+                            transform: scaleX(1.02)scaleY(0.98);
+                            opacity: 1;
+                        }
+                        100% {
+                            transform: scale(1);
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-pagination {
+            bottom: 110px;
+            
+            .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+                background: $swiperBullet_2;
+                opacity: 1;
+                margin: 0 15px;
+            }
+            .swiper-pagination-bullet-active {
+                width: 14px;
+                height: 14px;
+                background: $swiperBullet_1;
+                margin: 0 15px;
+            }
+        }
+    }
+
+    //marquee
+    .marqueeGroup {
+        width: 1357px;
+        height: 54px;
+        @include marquee;
+        z-index: 2;
+
+    }
+    //遊戲選單
+    .gameGroup {
+        width: 1400px;
+        height: auto;
+        margin: 40px auto 45px;
+
+        ul {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 0 15px;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+
+                &:hover,&:active,&.active {
+                    .picGroup {
+                        .frontPic {
+                            .AALive {
+                                animation: Live 1.5s linear infinite;
+                                transform-origin: bottom;
+                            }
+                            .SSLive {
+                                animation: Live 1.5s linear infinite;
+                                transform-origin: bottom;
+                            }
+                            .BBBSlot {
+                                animation: BBBSlot 1.5s linear infinite;
+                                transform-origin: bottom;
+                            }
+                            .CCCSlot {
+                                animation: CCCSlot 1.5s linear infinite;
+                                transform-origin: bottom;
+                                animation-fill-mode:alternate;
+                            }
+                            .ABCBoard1 {
+                                animation: ABCBoard1 1s linear infinite;
+                            }
+                            .ABCBoard2 {
+                                animation: ABCBoard2 3s linear 0.5s infinite;
+                            }
+                            .ABCTicket {
+                                animation: ABCTicket 0.8s linear infinite;
+                            }
+                            .ABCTicketb {
+                                animation: ABCTicketb 0.8s linear 0.5s infinite;
+                            }
+                            .ABCSport {
+                                animation: ABCSport 1s linear 0.5s infinite;
+                            }
+                            .TTFish {
+                                animation: TTFish 2s linear infinite;
+                            }
+                            @keyframes Live {
+                                0% {
+                                    transform: rotate(0deg);
+                                }
+                                25% {
+                                    transform: rotate(-5deg);
+                                }
+                                70% {
+                                    transform: rotate(5deg);
+                                }
+                                100% {
+                                    transform: rotate(0deg);
+                                }
+                            }
+                            @keyframes BBBSlot {
+                                0% {
+                                    transform: translateX(0);
+                                }
+                                25% {
+                                    transform: translateX(5px);
+                                }
+                                50% {
+                                    transform: translateX(-30px);
+                                }
+                                70% {
+                                    transform: translateX(-20px);
+                                }
+                                80% {
+                                    transform: translateX(-50px)scale(0.9);
+                                }
+                                90% {
+                                    transform: translateX(50px)scale(1.02);
+                                }
+                                100% {
+                                    transform: translateX(0);
+                                }
+                            }
+                            @keyframes CCCSlot {
+                                0% {
+                                    transform: translateY(0px);
+                                }
+                                20% {
+                                    transform: translateY(130px);
+                                }
+                                40% {
+                                    transform: translateY(100px);
+                                }
+                                50% {
+                                    transform: translateY(1px);
+                                }
+                                55% {
+                                    transform: translateY(-1px)scale(1.05);
+                                }
+                                70% {
+                                    transform: translateY(0px);
+                                }
+                                80% {
+                                    transform: translateY(0px);
+                                }
+                                100% {
+                                    transform: translateY(0px);
+                                }
+                            }
+                            @keyframes ABCBoard1 {
+                                0% {
+                                    transform: rotate(0);
+                                }
+                                20% {
+                                    transform: rotate(-15deg);
+                                }
+                                70% {
+                                    transform: rotate(15deg);
+                                }
+                                100% {
+                                    transform: rotate(0);
+                                }
+                            }
+                            @keyframes ABCBoard2 {
+                                0% {
+                                    transform: rotate(0);
+                                }
+                                20% {
+                                    transform: rotate(-360deg);
+                                }
+                                70% {
+                                    transform: rotate(360deg);
+                                }
+                                100% {
+                                    transform: rotate(0);
+                                }
+                            }
+                            @keyframes ABCTicket {
+                                0% {
+                                    transform: scale(1) translateY(1px);
+                                }
+                                50% {
+                                    transform: scaleX(1.1) scaleY(0.98) translateY(-40px);
+                                }
+                                80% {
+                                    transform: scaleX(0.98) scaleY(1.1)translateY(-30px);
+                                }
+                                90% {
+                                    transform: scaleX(0.98) scaleY(1.1)translateY(-20px);
+                                }
+                                100% {
+                                    transform: scale(1) translateY(1px);
+                                }
+                            }
+                            @keyframes ABCTicketb {
+                                0% {
+                                    transform: scale(1) translateY(0px);
+                                }
+                                50% {
+                                    transform: scaleX(1.1) scaleY(0.98) translateY(1px);
+                                }
+                                80% {
+                                    transform: scaleX(0.98) scaleY(1.1)translateY(-1px);
+                                }
+                                100% {
+                                    transform: scale(1) translateY(0px);
+                                }
+                            }
+                            @keyframes ABCSport {
+                                0% {
+                                    transform: translateX(0px);
+                                }
+                                50% {
+                                    transform: translateX(20px);
+                                }
+                                70% {
+                                    transform: translateX(-10px)translateY(10px);
+                                }
+                                90% {
+                                    transform: translateX(10px)translateY(20px);
+                                }
+                                100% {
+                                    transform: translateX(0px)translateY(0px);
+                                }
+                            }
+
+                            @keyframes TTFish {
+                                0% {
+                                    transform: scale(1);
+                                }
+                                20% {
+                                    transform: scaleX(1)translateY(-30px)translateX(-50px);
+                                }
+                                30% {
+                                    transform: scaleX(1)translateY(-20px)translateX(30px);
+                                }
+                                70% {
+                                    transform: scaleX(1)translateY(-30px)translateX(40px);
+                                }
+                                80% {
+                                    transform: scale(1)translateY(-30px)translateX(-40px);
+                                }
+                                90% {
+                                    transform: scale(1)translateY(10px)translateX(-20px);
+                                }
+                                100% {
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+                    .txtitem {
+                        p {
+                            color: $gameBg_1;
+                        }
+                        span {
+                            color: $gameBg_2;
+                        }
+                    }
+                }
+
+                .picGroup {
+                    width: 338px;
+                    height: 250px;
+                    position: relative;
+                    mask-size: cover;
+                    overflow: hidden;
+                    position: relative;
+
+                    .gameBgGroup {
+                        width: 338px;
+                        height: 228px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+
+                        .gameBg {
+                            width: 338px;
+                            height: 228px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                    .frontPic {
+                        width: auto;
+                        height: auto;
+                        position: absolute;
+                        bottom: 25px;
+                        left: 70px;
+                        animation: frontPic 2s linear infinite;
+
+                        @keyframes frontPic {
+                            0% {
+                                transform: scaleX(1)scaleY(1);
+                            }
+                            25% {
+                                transform: scaleX(0.98)scaleY(1.02);
+                            }
+                            50% {
+                                transform: scaleX(1)scaleY(1);
+                            }
+                            75% {
+                                transform: scaleX(0.98)scaleY(1.02);
+                            }
+                            100% {
+                                transform: scaleX(1)scaleY(1);
+                            }
+                        }
+                        img {
+                            width: auto;
+                            height: auto;
+
+                            &.AALive {
+                                position: absolute;
+                                bottom: -78px;
+                                left: -10px;
+                            }
+                            &.SSLive {
+                                position: absolute;
+                                bottom: -74px;
+                                left: -28px;
+                            }
+                            &.BBBSlot {
+                                position: absolute;
+                                bottom: -115px;
+                                left: -48px;
+                            }
+                            &.CCCSlot {
+                                position: absolute;
+                                bottom: -133px;
+                                left: -88px;
+                            }
+                            &.ABCBoard1 {
+                                position: absolute;
+                                bottom: -69px;
+                                left: 12px;
+                            }
+                            &.ABCBoard2 {
+                                position: absolute;
+                                bottom: -19px;
+                                left: -47px;
+                            }
+                            &.ABCBoard3 {
+                                position: absolute;
+                                bottom: -42px;
+                                left: -49px;
+                            }
+                            &.ABCTicket {
+                                position: absolute;
+                                bottom: -60px;
+                                left: -58px;
+                            }
+                            &.ABCTicketb {
+                                position: absolute;
+                                bottom: 3px;
+                                left: -35px;
+                            }
+                            &.ABCSport {
+                                position: absolute;
+                                bottom: -252px;
+                                left: -138px;
+                            }
+                            &.TTFish {
+                                position: absolute;
+                                bottom: -33px;
+                                left: -52px;
+                            }
+                        }
+                    }
+                    span {
+                        color: $gameTitle_2;
+                        font-size: 34px;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                    }
+                }
+                //遊戲底部文字
+                .txtitem {
+                    width: 280px;
+                    height: 65px;
+                    // background: $gameBorder_1;
+                    border-radius: 10px;
+                    font-size: 25px;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    margin: 10px 0 20px;
+
+                    p {
+                        font-size: 35px;
+                        color: $gameTitle_1;
+                    }
+                    span {
+                        font-size: 35px;
+                        color: $gameTitle_2;
+                    }
+                }
+            }
+        }
+    }
+}

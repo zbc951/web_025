@@ -1,0 +1,295 @@
+//header
+header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    //上部
+    .top {
+        width: 100%;
+        height: auto;
+        background: $headerBg_1;
+
+        .center {
+            width: 1400px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0 auto;
+
+            //登入
+            form {
+                width: auto;
+                height: auto;
+                display: flex;
+
+                label {
+                    width: auto;
+                    height: auto;
+                    margin-right: 5px;
+
+                    input {
+                        width: 153px;
+                        height: 28px;
+                        background: $inputBg_1;
+                        border: 1px solid $inputBorder_1;
+                        color: $placeholder_1;
+                        padding-left: 5px;
+                        box-shadow: inset 1px 1px 1px 0 $shadowColor_1;
+
+                        &::placeholder {
+                            font-size: 15px;
+                            color: $placeholder_1;
+                        }
+                    }
+                }
+                //按鈕
+                .buttonGroup {
+                    width: auto;
+                    height: auto;
+
+                    button {
+                        width: 66px;
+                        height: 28px;
+                        background: $buttonbg_1;
+                        border: 1px solid $buttonBorder_1;
+                        border-radius: 2px;
+                        color: $buttonTxt_1;
+                        font-size: 15px;
+                        margin-right: 5px;
+
+                        &:hover,&:active,&.active {
+                            background: $buttonbg_3;
+                            color: $buttonTxt_1;
+                        }
+
+                        &:last-child {
+                            background: $buttonbg_2;
+                            border: 1px solid $buttonBorder_2;
+                            color: $buttonTxt_1;
+
+                            &:hover,&:active,&.active {
+                                background: $buttonbg_4;
+                                border: 1px solid $buttonBorder_2;
+                                color: $buttonTxt_1;
+                            }
+                        }
+                    }
+                }
+            }
+            // 忘記密碼
+            .forget {
+                width: auto;
+                height: auto;
+                display: flex;
+                align-items: center;
+                padding: 0 60px 0 5px;
+
+                i {
+                    width: 17px;
+                    height: 17px;
+                    border: 1px solid $forgetColor_1;
+                    border-radius: 50%;
+                    position: relative;
+                    margin-right: 5px;
+
+                    &::before {
+                        content: "?";
+                        font-size: 12px;
+                        color: $forgetColor_1;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+                a {
+                    font-size: 15px;
+                    color: $forgetColor_1;
+                    text-decoration: underline;
+                }
+            }
+
+            // 語言
+            .language {
+                width: auto;
+                height: auto;
+                position: relative;
+
+                select {
+                    width: 100px;
+                    height: 40px;
+                    background: $languageBg_1;
+                    font-size: 15px;
+                    color: $selectTxt_1;
+                    padding-left: 10px;
+                    cursor: pointer;
+
+                    option {
+                        background: $optionBg_1;
+                        color: $optionTxt_1;
+                    }
+                }
+                i {
+                    width: 0px;
+                    height: 0px;
+                    border-width: 6px 6px 0 6px;
+                    border-style: solid;
+                    border-color: $selectTxt_1 transparent transparent transparent;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                }
+            }
+        }
+    }
+    //下部
+    .bottom {
+        width: 100%;
+        height: auto;
+
+        .center {
+            width: 1400px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+
+            //logo
+            .logo {
+                width: 134px;
+                height: 43px;
+                cursor: pointer;
+            }
+
+            .navGroup {
+                width: auto;
+                height: auto;
+                display: flex;
+
+                li {
+                    width: 102px;
+                    height: 43px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 6px;
+                    cursor: pointer;
+                    position: relative;
+                    filter: drop-shadow(0px 1px 1px $shadowColor_1);
+
+                    &::before {
+                        content: "";
+                        width: 90px;
+                        height: 32px;
+                        background: $navHover_1;
+                        border-radius: 6px;
+                        box-shadow: inset 1px 1px 5px 0px $shadowColor_1;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        z-index: 1;
+                    }
+
+                    &:hover,&:active,&.active {
+                        &::before {
+                            content: "";
+                            width: 90px;
+                            height: 32px;
+                            background: $navHover_3;
+                            border-radius: 6px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            z-index: 1;
+                        }
+
+                        a {
+                            color: $navHover_2;
+                        }
+                    }
+
+                    a {
+                        color: $mainColor_1;
+                        font-size: 20px;
+                        font-weight: bold;
+                        position: relative;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    }
+    //下拉選單
+    // .downList {
+    //     width: 100%;
+    //     height: auto;
+    //     position: absolute;
+    //     top: 120px;
+    //     left: 0;
+    //     transition: 0.3s all;
+    //     z-index: 999;
+    //     display: none;
+
+    //     &.display {
+    //         display: block;
+    //     }
+    //     .listWrap {
+    //         width: 100%;
+    //         height: 230px;
+    //         background: $downListBg_1;
+
+    //         .center {
+    //             width: 1400px;
+    //             height: 100%;
+    //             margin: 0 auto;
+    //             display: flex;
+    //             align-items: center;
+    //             justify-content: center;
+    //             position: relative;
+    
+    //             ol {
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 display: none;
+    //                 align-items: center;
+                    
+    //                 &.display {
+    //                     display: flex;
+    //                 }
+                    
+    //                 li {
+    //                     width: auto;
+    //                     height: auto;
+    //                     display: flex;
+    //                     flex-direction: column;
+    //                     align-items: center;
+    //                     justify-content: center;
+    //                     cursor: pointer;
+    //                     margin: 10px 50px 0 0 ;
+                        
+    //                     img {
+    //                         width: 100%;
+    //                         height: 100%;
+    //                         object-fit: contain;
+    //                     }
+    //                     p { 
+    //                         font-size: 15px;
+    //                         font-weight: bold;
+    //                         color: #ffffff;
+    //                         padding-top: 8px;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}
